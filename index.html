@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math Challenge Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🧠 Math Challenge</h1>
+  <div class="question" id="question"></div>
+  <input type="number" id="answer" placeholder="Your answer" />
+  <button onclick="submitAnswer()">Submit</button>
+  <p id="feedback"></p>
+  <p id="score">Score: 0</p>
+
+  <!-- Audio elements using uploaded MP3 files -->
+  <audio id="correctSound" src="correct.mp3"></audio>
+  <audio id="wrongSound" src="wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

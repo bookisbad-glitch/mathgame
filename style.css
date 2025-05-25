@@ -1,0 +1,39 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.question {
+  font-size: 24px;
+  margin: 20px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px;
+  width: 100px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+#feedback {
+  font-size: 20px;
+  margin: 15px;
+}
+
+#score {
+  font-size: 18px;
+  margin-top: 10px;
+}
