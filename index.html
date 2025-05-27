@@ -10,6 +10,11 @@
   <div id="auth">
     <h2>Login or Sign Up</h2>
     <input type="text" id="username" placeholder="Enter username" />
+    <select id="difficulty">
+      <option value="easy">Easy (1–10)</option>
+      <option value="medium">Medium (10–50)</option>
+      <option value="hard">Hard (50–100)</option>
+    </select>
     <button onclick="login()">Start Game</button>
   </div>
 
@@ -20,7 +25,9 @@
     <button onclick="submitAnswer()">Submit</button>
     <p id="feedback"></p>
     <p id="score">Score: 0</p>
-
+    <p id="streak"></p>
+    <p id="timer">Time Left: 10</p>
+    <p id="badge"></p>
     <h3>🏆 Leaderboard</h3>
     <ul id="leaderboard"></ul>
   </div>
