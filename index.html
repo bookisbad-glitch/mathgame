@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🧠 Math Challenge</h1>
-  <div class="question" id="question"></div>
-  <input type="number" id="answer" placeholder="Your answer" />
-  <button onclick="submitAnswer()">Submit</button>
-  <p id="feedback"></p>
-  <p id="score">Score: 0</p>
+  <div id="auth">
+    <h2>Login or Sign Up</h2>
+    <input type="text" id="username" placeholder="Enter username" />
+    <button onclick="login()">Start Game</button>
+  </div>
 
-  <!-- Audio elements using uploaded MP3 files -->
+  <div id="game" style="display: none;">
+    <h1>🧠 Math Challenge</h1>
+    <div class="question" id="question"></div>
+    <input type="number" id="answer" placeholder="Your answer" />
+    <button onclick="submitAnswer()">Submit</button>
+    <p id="feedback"></p>
+    <p id="score">Score: 0</p>
+
+    <h3>🏆 Leaderboard</h3>
+    <ul id="leaderboard"></ul>
+  </div>
+
   <audio id="correctSound" src="correct.mp3"></audio>
   <audio id="wrongSound" src="wrong.mp3"></audio>
 
