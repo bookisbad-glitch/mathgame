@@ -42,8 +42,8 @@ function generateQuestion() {
 }
 
 function submitAnswer() {
+  const userAnswer = Number(document.getElementById('answer').value);
   document.getElementById('answer').value = '';
-  const userAnswer = parseInt(document.getElementById('answer').value);
   const feedback = document.getElementById('feedback');
   clearInterval(timerInterval);
 
