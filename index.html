@@ -9,13 +9,30 @@
 <body>
   <div id="auth">
     <h2>Login or Sign Up</h2>
-    <input type="text" id="username" placeholder="Enter username" />
+    <input type="text" id="username" placeholder="Enter username" /><br>
+    
+    <label>Mode:</label>
+    <select id="mode">
+      <option value="endless">Endless</option>
+      <option value="timed">Timed (60s)</option>
+      <option value="sudden">Sudden Death</option>
+    </select><br>
+
+    <label>Difficulty:</label>
     <select id="difficulty">
       <option value="easy">Easy (1–10)</option>
       <option value="medium">Medium (10–50)</option>
       <option value="hard">Hard (50–100)</option>
-    </select>
-    <button onclick="login()">Start Game</button>
+    </select><br>
+
+    <label><input type="checkbox" id="add" checked> ➕</label>
+    <label><input type="checkbox" id="sub" checked> ➖</label>
+    <label><input type="checkbox" id="mul" checked> ✖️</label><br>
+
+    <label><input type="checkbox" id="soundToggle" checked> 🔊 Sound On</label><br><br>
+
+    <button onclick="login()">Start Game</button><br><br>
+    <progress id="progressBar" value="0" max="60" style="width: 80%; display: none;"></progress>
   </div>
 
   <div id="game" style="display: none;">
@@ -28,6 +45,8 @@
     <p id="streak"></p>
     <p id="timer">Time Left: 10</p>
     <p id="badge"></p>
+    <p id="stats"></p>
+
     <h3>🏆 Leaderboard</h3>
     <ul id="leaderboard"></ul>
   </div>
