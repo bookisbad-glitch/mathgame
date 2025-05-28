@@ -77,15 +77,22 @@ function updateStreakAndBadge() {
   else badge.textContent = "";
 }
 
+
 function updateLeaderboard() {
   let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
-  leaderboard = leaderboard.filter(entry => entry.name !== currentUser);
-  leaderboard.push({ name: currentUser, score });
+  let found = leaderboard.find(entry => entry.name === currentUser);
+
+  if (!found || score > found.score) {
+    leaderboard = leaderboard.filter(entry => entry.name !== currentUser);
+    leaderboard.push({ name: currentUser, score });
+  }
+
   leaderboard.sort((a, b) => b.score - a.score);
   leaderboard = leaderboard.slice(0, 5);
   localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
   showLeaderboard();
 }
+
 
 function showLeaderboard() {
   const leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
