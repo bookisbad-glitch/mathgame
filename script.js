@@ -42,6 +42,7 @@ function generateQuestion() {
 }
 
 function submitAnswer() {
+  document.getElementById('answer').value = '';
   const userAnswer = parseInt(document.getElementById('answer').value);
   const feedback = document.getElementById('feedback');
   clearInterval(timerInterval);
@@ -118,3 +119,11 @@ function resetTimer() {
     }
   }, 1000);
 }
+
+
+
+document.getElementById('answer').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && !('ontouchstart' in window)) {
+    submitAnswer();
+  }
+});
